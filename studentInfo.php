@@ -33,7 +33,7 @@ try {
     $dbname = 'aanvraagformulier';
     $username = 'root';
     $password = '';
-	$port = 3307 //port 3307 op mijn computer LET OP verander jouw port naar die van jouw!!!
+	$port = 3306 //port 330 op mijn computer LET OP verander jouw port naar die van jouw!!!
 
 	$dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
