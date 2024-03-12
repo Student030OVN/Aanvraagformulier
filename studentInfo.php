@@ -27,8 +27,15 @@
 			<label for="crebo_Opleiding">Crebo Opleiding :</label>
 			<input type="number" name="crebo_Opleiding">
 			<br>
-			<input type="submit" name="verwerkingID" value="Ga door">
+			<br>
+			<form action="upload.php" method="GET" enctype="multipart/form-data">
+				Select image to upload:
+				<input type="file" name="bestandUpload" id="bestandUpload">
+				<input type="submit" name="verwerkingID" value="Ga door">
+			</form>
+			<br>
 		</form>
+
 	</div>
 	<?php
 
@@ -49,9 +56,10 @@
 			$leeftijd = $_GET['leeftijd'];
 			$naamOpleiding = $_GET['naamOpleiding'];
 			$crebo_Opleiding = $_GET['crebo_Opleiding'];
+			$bestandUpload = $_GET['bestandUpload'];
 
 			// Voorbereiden van de INSERT query
-			$stmt = $dbh->prepare("INSERT INTO studentid (naamStudent, studentNum, leeftijd, naamOpleiding, crebo_Opleiding) VALUES (:naamStudent, :studentNum, :leeftijd, :naamOpleiding, :crebo_Opleiding)");
+			$stmt = $dbh->prepare("INSERT INTO studentid (naamStudent, studentNum, leeftijd, naamOpleiding, crebo_Opleiding, bestandUpload) VALUES (:naamStudent, :studentNum, :leeftijd, :naamOpleiding, :crebo_Opleiding, :bestandUpload)");
 
 			// Bind de waarden aan de parameters
 			$stmt->bindParam(':naamStudent', $naamStudent);
@@ -59,6 +67,7 @@
 			$stmt->bindParam(':leeftijd', $leeftijd);
 			$stmt->bindParam(':naamOpleiding', $naamOpleiding);
 			$stmt->bindParam(':crebo_Opleiding', $crebo_Opleiding);
+			$stmt->bindParam(':bestandUpload', $bestandUpload);
 			$stmt->execute();
 
 			echo "Nieuwe record toegevoegd.";
