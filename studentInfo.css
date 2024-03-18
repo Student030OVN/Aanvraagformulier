@@ -1,0 +1,72 @@
+*{
+	padding: 0;
+	margin: 0;
+  }
+.top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.top img {
+	width: 80px;
+    height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.top h1 {
+	color: white;
+	padding-right: 10px;
+	font-size: 30px;
+	font-family: 'Poppins', sans-serif;
+}
+header {
+	
+	background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 70%,
+    #2e3192 70%,
+    #2e3192 100%
+  );
+  
+}
+.studentenID {
+	color: white;
+	font-family: 'Poppins', sans-serif;	
+	display: flex;
+	justify-content: flex-start;
+	border-radius: 20px;
+}
+form {
+	margin: 30px;
+	display: flex;
+    flex-direction: column;
+	background-color: #2e3192;
+	padding: 10px;
+	border-radius: 10px;
+	width: 500px;
+	height: 500px;
+}
+form label {
+	display: flex;
+	justify-content: flex-start;
+}
+form input {
+	height: 40px;
+	border: solid 10px black;
+	border-top: none;
+    border-right: none;
+	border-radius: 10px 0px 10px 10px;
+}
+.foto {
+	width: 100%;
+}
+.foto img{
+	width: 100%;
+}
+
+select #crebo_Opleiding {
+	padding: 10px;
+    font-size: large;
+    border-top: none;
+}
