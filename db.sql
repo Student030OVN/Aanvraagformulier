@@ -5,5 +5,6 @@ CREATE TABLE studentid(
 	studentNum int NOT NULL,
 	leeftijd int NOT NULL,
 	naamOpleiding varchar(30) NOT NULL,
-	crebo_Opleiding int NOT NULL
+	crebo_Opleiding int NOT NULL,
+	bestandUpload varchar(100) NOT NULL
 )
