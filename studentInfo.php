@@ -36,9 +36,6 @@
 			<br>
 			<input type="submit" name="verwerkingID" value="Ga door" >
 		</form>
-		<div class="foto">
-			<img src="foto.png" alt="">
-		</div>
 	</div>
 	<?php
 
